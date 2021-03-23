@@ -1,11 +1,13 @@
 /* section hero */
 .hero-section {
+  position: relative;
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
     url(../img/main/hero-background.jpg);
+  padding: 200px 0 280px 0;
   margin-left: auto;
   margin-right: auto;
   background-repeat: no-repeat;
@@ -14,9 +16,7 @@
   background-size: cover;
   background-position: center;
 
-  padding: 200px 0 280px 0;
   text-align: center;
-
   color: var(--white);
 }
 
@@ -43,6 +43,36 @@
 
   box-shadow: 0px 4px 4px var(--btn-boxshadow-color);
   border-radius: 4px;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.data-backdrop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 500px;
+  height: 500px;
+
+  background-color: var(--white);
 }
 
 /* section out features */

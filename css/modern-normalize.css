@@ -177,6 +177,10 @@ textarea {
   margin: 0; /* 2 */
 }
 
+button {
+  border: none;
+}
+
 address {
   font-style: normal;
 }
