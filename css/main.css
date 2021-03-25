@@ -225,6 +225,10 @@
 
 .social-item {
   border-radius: 50%;
+
+  transition-property: background-color;
+  transition-duration: var(--transiton-duration-time);
+  transition-timing-function: var(--timing-function);
 }
 
 .social-item:not(:first-child) {

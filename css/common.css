@@ -14,6 +14,8 @@
   --item-set-gap: 30px;
   --button-background: rgba(245, 244, 250, 1);
   --hero-backdrop: rgba(0, 0, 0, 0.2);
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --transiton-duration-time: 250ms;
 }
 
 body {
@@ -94,6 +96,12 @@ body {
   padding-bottom: 32px;
 }
 
+.nav-item {
+  transition-property: color;
+  transition-duration: var(--transiton-duration-time);
+  transition-timing-function: var(--timing-function);
+}
+
 .nav-item:not(:first-child) {
   margin-left: 50px;
 }
@@ -139,6 +147,10 @@ body {
   color: var(--secondary);
   display: flex;
   align-items: center;
+
+  transition-property: color;
+  transition-duration: var(--transiton-duration-time);
+  transition-timing-function: var(--timing-function);
 }
 
 .contact-item:nth-child(2) {
@@ -189,6 +201,10 @@ body {
 .footer-contact {
   margin-top: 9px;
   color: rgba(255, 255, 255, 0.6);
+
+  transition-property: color;
+  transition-duration: var(--transiton-duration-time);
+  transition-timing-function: var(--timing-function);
 }
 
 .footer-contact:hover,
@@ -219,6 +235,10 @@ body {
 .icon-item {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+
+  transition-property: background-color;
+  transition-duration: var(--transiton-duration-time);
+  transition-timing-function: var(--timing-function);
 }
 
 .icon-item:not(:first-child) {
@@ -238,7 +258,8 @@ body {
   fill: var(--white);
 }
 
-.icon-item:hover {
+.icon-item:hover,
+icon-item:focus {
   background-color: var(--blue);
 }
 
@@ -294,62 +315,8 @@ body {
   background-color: var(--white);
 }
 
-.close-button:hover {
+.close-button:hover,
+.close-button:focus {
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
-}
-
-.product-thumb {
-  position: relative;
-  overflow: hidden;
-}
-
-.product-thumb::before {
-  content: '';
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-
-  width: 100%;
-  height: 100%;
-
-  background-color: rgba(33, 150, 243, 0.9);
-
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transform: translateY(100%);
-}
-
-.project-item:hover .product-thumb::before {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.thumb-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-
-  width: 100%;
-  height: 100%;
-  padding: 63px 24px;
-
-  color: var(--white);
-  text-align: start;
-
-  font-size: 18px;
-  line-height: 28px;
-  letter-spacing: 0.03em;
-  font-weight: 400;
-
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transform: translateY(100%);
-}
-
-.project-item:hover .thumb-text {
-  transform: translateY(0);
-  opacity: 1;
-  padding: 63px 24px;
 }
