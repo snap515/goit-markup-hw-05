@@ -247,6 +247,10 @@
 
 .social-icon {
   fill: rgba(175, 177, 184, 1);
+
+  transition-property: fill;
+  transition-duration: var(--transiton-duration-time);
+  transition-timing-function: var(--timing-function);
 }
 
 .regular-customers {
@@ -269,6 +273,10 @@
 
   border: 1px solid var(--main-logo);
   border-radius: 4px;
+
+  transition-property: border;
+  transition-duration: var(--transiton-duration-time);
+  transition-timing-function: var(--timing-function);
 }
 
 .customer-item:not(:first-child) {
@@ -282,13 +290,17 @@
   fill: var(--blue);
 }
 
+.customer-icon {
+  fill: var(--main-logo);
+
+  transition-property: fill;
+  transition-duration: var(--transiton-duration-time);
+  transition-timing-function: var(--timing-function);
+}
+
 .customer-item:focus .customer-icon,
 .customer-item:hover .customer-icon {
   fill: var(--blue);
-}
-
-.customer-icon {
-  fill: var(--main-logo);
 }
 
 .customer-link {

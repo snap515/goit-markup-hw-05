@@ -259,7 +259,7 @@ body {
 }
 
 .icon-item:hover,
-icon-item:focus {
+.icon-item:focus {
   background-color: var(--blue);
 }
 

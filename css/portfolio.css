@@ -149,7 +149,8 @@
   transform: translateY(100%);
 }
 
-.project-item:hover .thumb-text {
+.project-item:hover .thumb-text,
+.project-item:focus .thumb-text {
   transform: translateY(0);
   opacity: 1;
 }
