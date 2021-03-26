@@ -222,6 +222,8 @@
   justify-content: space-around;
   align-items: center;
 
+  border-radius: 50%;
+
   transition-property: background-color;
   transition-duration: var(--transiton-duration-time);
   transition-timing-function: var(--timing-function);
@@ -249,13 +251,12 @@
   transition-timing-function: var(--timing-function);
 }
 
-.social-item:hover,
+.social-link:hover,
 .social-link:focus {
   background-color: var(--blue);
-  border-radius: 50%;
 }
 
-.social-item:hover .social-icon,
+.social-link:hover .social-icon,
 .social-link:focus .social-icon {
   fill: var(--background-main);
 }
@@ -278,36 +279,11 @@
   width: 170px;
   height: 90px;
 
-  border: 1px solid var(--main-logo);
-  border-radius: 4px;
-
-  transition-property: color border-color;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-function);
-}
-
-.customer-item:not(:first-child) {
-  margin-left: 30px;
-}
-
-.customer-link:focus,
-.customer-item:hover {
-  border: 1px solid var(--blue);
-  border-radius: 4px;
-  fill: var(--blue);
-}
-
-.customer-icon {
   fill: var(--main-logo);
 
-  transition-property: fill;
+  transition-property: color border-color fill;
   transition-duration: var(--transiton-duration-time);
   transition-timing-function: var(--timing-function);
-}
-
-.customer-link:focus .customer-icon,
-.customer-item:hover .customer-icon {
-  fill: var(--blue);
 }
 
 .customer-link {
@@ -318,7 +294,34 @@
   justify-content: center;
   align-items: center;
 
-  transition-property: color border-color;
+  border: 1px solid;
+  border-color: var(--main-logo);
+  border-radius: 4px;
+
+  fill: var(--main-logo);
+
+  transition-property: border-color;
   transition-duration: var(--transiton-duration-time);
   transition-timing-function: var(--timing-function);
+}
+
+.customer-icon {
+  fill: var(--main-logo);
+  transition-property: fill;
+  transition-duration: var(--transiton-duration-time);
+  transition-timing-function: var(--timing-function);
+}
+
+.customer-item:not(:first-child) {
+  margin-left: 30px;
+}
+
+.customer-link:focus,
+.customer-link:hover {
+  border-color: var(--blue);
+}
+
+.customer-link:focus .customer-icon,
+.customer-link:hover .customer-icon {
+  fill: var(--blue);
 }
