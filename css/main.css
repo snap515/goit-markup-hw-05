@@ -198,6 +198,8 @@
 }
 
 .our-team-position {
+  margin-bottom: 16px;
+
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -206,8 +208,6 @@
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--prof-color);
-
-  margin-bottom: 16px;
 }
 
 .social-list {
@@ -221,10 +221,16 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  transition-property: background-color;
+  transition-duration: var(--transiton-duration-time);
+  transition-timing-function: var(--timing-function);
 }
 
 .social-item {
   border-radius: 50%;
+
+  color: var(--main-logo);
 
   transition-property: background-color;
   transition-duration: var(--transiton-duration-time);
@@ -235,22 +241,23 @@
   margin-left: 10px;
 }
 
-.social-item:hover,
-.social-item:focus {
-  background-color: var(--blue);
-}
-
-.social-item:hover .social-icon,
-.social-item:focus .social-icon {
-  fill: var(--background-main);
-}
-
 .social-icon {
-  fill: rgba(175, 177, 184, 1);
+  fill: currentColor;
 
   transition-property: fill;
   transition-duration: var(--transiton-duration-time);
   transition-timing-function: var(--timing-function);
+}
+
+.social-item:hover,
+.social-link:focus {
+  background-color: var(--blue);
+  border-radius: 50%;
+}
+
+.social-item:hover .social-icon,
+.social-link:focus .social-icon {
+  fill: var(--background-main);
 }
 
 .regular-customers {
@@ -274,7 +281,7 @@
   border: 1px solid var(--main-logo);
   border-radius: 4px;
 
-  transition-property: border;
+  transition-property: color border-color;
   transition-duration: var(--transiton-duration-time);
   transition-timing-function: var(--timing-function);
 }
@@ -283,7 +290,7 @@
   margin-left: 30px;
 }
 
-.customer-item:focus,
+.customer-link:focus,
 .customer-item:hover {
   border: 1px solid var(--blue);
   border-radius: 4px;
@@ -298,7 +305,7 @@
   transition-timing-function: var(--timing-function);
 }
 
-.customer-item:focus .customer-icon,
+.customer-link:focus .customer-icon,
 .customer-item:hover .customer-icon {
   fill: var(--blue);
 }
@@ -310,4 +317,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition-property: color border-color;
+  transition-duration: var(--transiton-duration-time);
+  transition-timing-function: var(--timing-function);
 }
