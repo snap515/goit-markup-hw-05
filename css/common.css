@@ -15,7 +15,7 @@
   --button-background: rgba(245, 244, 250, 1);
   --hero-backdrop: rgba(0, 0, 0, 0.2);
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  --transiton-duration-time: 2500ms;
+  --transiton-duration-time: 250ms;
 }
 
 body {
@@ -147,6 +147,9 @@ body {
 }
 
 .contact-list a {
+  display: flex;
+  align-items: center;
+
   transition-property: color;
   transition-duration: var(--transiton-duration-time);
   transition-timing-function: var(--timing-function);
@@ -293,11 +296,18 @@ body {
   height: 100%;
 
   background-color: var(--hero-backdrop);
+
+  transform: scale(1);
+  transition-property: visibility opacity pointer-events transform;
+  transition-duration: var(--transiton-duration-time);
+  transition-timing-function: var(--timing-function);
 }
 
 .backdrop.is-hidden {
+  transform: scale(0);
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
 }
 
 .modal {
@@ -316,10 +326,6 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-
-  transition-property: transform translate top left;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-function);
 }
 
 .close-button {
