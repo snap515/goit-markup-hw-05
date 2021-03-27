@@ -131,7 +131,7 @@
   position: relative;
 }
 
-.we-do-text {
+.text-position {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -144,6 +144,9 @@
   width: 100%;
 
   background: rgba(47, 48, 58, 0.8);
+}
+
+.we-do-text {
   color: var(--white);
   font-weight: 700;
   font-size: 14px;
